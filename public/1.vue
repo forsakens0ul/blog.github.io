@@ -1,0 +1,61 @@
+<template>
+  <World>
+    <Model
+      :x="3.61"
+      :y="29.12"
+      :z="99.76"
+      :width="471.9"
+      :depth="460.28"
+      :scale-x="50"
+      :scale-y="50"
+      :scale-z="50"
+      src="dd.glb"
+    />
+    <FirstPersonCamera
+      :x="-191.71"
+      :y="-549.12"
+      :z="9634.71"
+      :rotation-y="-90"
+      :inner-y="40"
+    >
+      <Dummy
+        :animations='{"idle":"https://unpkg.com/lingo3d-dummy@1.0.1/assets/rifle-idle.fbx","running":"https://unpkg.com/lingo3d-dummy@1.0.1/assets/rifle-running.fbx","runningBackwards":"https://unpkg.com/lingo3d-dummy@1.0.1/assets/rifle-running-backwards.fbx","jumping":"https://unpkg.com/lingo3d-dummy@1.0.1/assets/rifle-falling.fbx"}'
+        animation="idle"
+        pbr
+        :x="-191.71"
+        :y="-549.12"
+        :z="9634.71"
+        :width="20"
+        :depth="20"
+        :scale-x="2.5"
+        :scale-y="2.5"
+        :scale-z="2.5"
+        :rotation-y="90"
+        src="https://unpkg.com/lingo3d-dummy@1.0.1/assets/ybot.fbx"
+        preset="rifle"
+        stride-move
+      >
+        <Find name="mixamorigRightHand" :normal-scale='{"x":1,"y":1}'>
+          <Model
+            :x="-2411.99"
+            :y="-384.82"
+            :z="-252.61"
+            :width="26.63"
+            :height="100"
+            :depth="277.87"
+            :scale-x="36.09"
+            :scale-y="36.09"
+            :scale-z="36.09"
+            :rotation-x="-159.36"
+            :rotation-y="-84.12"
+            :rotation-z="104.9"
+            :rotation="104.9"
+            src="gun.glb"
+          />
+        </Find>
+      </Dummy>
+    </FirstPersonCamera>
+    <FirstPersonCamera :x="-177.44" :y="-457.02" :z="9657.67" />
+    <Setup />
+  </World>
+</template>
